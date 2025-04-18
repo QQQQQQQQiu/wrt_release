@@ -738,7 +738,7 @@ main() {
     fix_mk_def_depends
     add_wifi_default_set
     update_default_lan_addr
-    update_default_wrt_name
+    #update_default_wrt_name
     remove_something_nss_kmod
     update_affinity_script
     fix_build_for_openssl
