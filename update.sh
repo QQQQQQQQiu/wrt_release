@@ -25,6 +25,7 @@ GOLANG_REPO="https://github.com/sbwml/packages_lang_golang"
 GOLANG_BRANCH="24.x"
 THEME_SET="bootstrap"
 LAN_ADDR="10.0.0.1"
+WRT_NAME="panda"
 
 clone_repo() {
     if [[ ! -d $BUILD_DIR ]]; then
@@ -237,6 +238,13 @@ update_default_lan_addr() {
     local CFG_PATH="$BUILD_DIR/package/base-files/files/bin/config_generate"
     if [ -f $CFG_PATH ]; then
         sed -i 's/192\.168\.[0-9]*\.[0-9]*/'$LAN_ADDR'/g' $CFG_PATH
+    fi
+}
+
+update_default_wrt_name() {
+    local CFG_PATH="$BUILD_DIR/package/base-files/files/bin/config_generate"
+    if [ -f $CFG_PATH ]; then
+        sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_PATH
     fi
 }
 
@@ -730,6 +738,7 @@ main() {
     fix_mk_def_depends
     add_wifi_default_set
     update_default_lan_addr
+    update_default_wrt_name
     remove_something_nss_kmod
     update_affinity_script
     fix_build_for_openssl
