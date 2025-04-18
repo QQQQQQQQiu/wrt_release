@@ -722,7 +722,7 @@ main() {
     reset_feeds_conf
     update_feeds
     remove_unwanted_packages
-    update_homeproxy
+    #update_homeproxy
     # fix_default_set
     fix_miniupnpd
     update_golang
@@ -749,12 +749,12 @@ main() {
     fix_compile_coremark
     update_dnsmasq_conf
     add_backup_info_to_sysupgrade
-    optimize_smartDNS
-    update_mosdns_deconfig
+    #optimize_smartDNS
+    #update_mosdns_deconfig
     fix_quickstart
-    update_oaf_deconfig
+    #update_oaf_deconfig
     add_timecontrol
-    add_gecoosac
+    #add_gecoosac
     install_feeds
     support_fw4_adg
     update_script_priority
