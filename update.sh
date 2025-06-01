@@ -749,7 +749,7 @@ main() {
     add_ax6600_led
     set_custom_task
     update_pw
-    install_opkg_distfeeds
+    #install_opkg_distfeeds
     update_nss_pbuf_performance
     set_build_signature
     fix_compile_vlmcsd
